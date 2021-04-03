@@ -1,0 +1,65 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+string clo[] = {"Tywin", "Hound", "Jaime", "Mountain"};
+string antclo[] = {"Tywin", "Mountain", "Jaime", "Hound"};
+
+string solve(string s, int a)
+{
+    int zero=0,one=0;
+    int diff;
+    for(int i=0;i<a;i++)
+    {
+        if(s[i]=='0')
+        {
+            zero+=1;
+        }
+        else
+        {
+            one+=1;
+        }
+    }
+        if(zero>one)
+        {
+            diff=zero-one;
+            return clo[diff];
+        }
+        else
+        {
+            diff=one-zero;
+            return antclo[diff];
+        }
+}
+
+
+int main()
+{
+    int t;
+    int n;
+    string str;
+    string ans[t];
+    cout<<"Enter no. of test cases:"<<endl;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        for(int i=0;i<n;i++)
+        {
+        cout<<"Enter size of string:"<<endl;
+        cin>>n;
+        cin>>str;
+        if(str.length()>n )
+        {
+            cout<<"Wrong length of string!";
+            break;
+        }
+        ans[i]=solve(str,n);
+        }
+    }
+    for(int i=0;i<t;i++)
+    {
+        cout<<ans[i];
+        cout<<"\n";
+    }
+}
+

@@ -1,0 +1,146 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void solve(vector<vector<int> > &A, int n, int m, int p)
+{
+  vector<vector<int> > V(n+m-1);
+  int i,j,k=0;
+  if(p==1)
+  {
+    for(int r=0;r<n;r++)
+    {
+      i=r;
+      j=0;
+      while(i>=0 && j<m)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j++;
+      }
+      k++;
+    }
+    for(int c=1;c<m;c++)
+    {
+      i=n-1;
+      j=c;
+      while(i>=0 && j<m)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j++;
+      }
+        k++;
+    }
+  }
+
+  else if(p==2)
+  {
+    for(int r=0;r<n;r++)
+    {
+      i=r;
+      j=m-1;
+      while(i>=0 && j>=0)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j--;
+      }
+      k++;
+    }
+    for(int c=m-2;c>=0;c--)
+    {
+      i=n-1;
+      j=c;
+      while(i>=0 && j>=0)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j--;
+      }
+      k++;
+    }
+  }
+
+  else if(p==3)
+  {
+    for(int c=m-1;c>=0;c--)
+    {
+      i=n-1;
+      j=c;
+      while(i>=0 && j<m)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j++;
+      }
+      k++;
+    }
+    for(int r=n-2;r>=0;r--)
+    {
+      i=r;
+      j=0;
+      while(i>=0 && j<m)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j++;
+      }
+      k++;
+    }
+  }
+
+  else if(p==4)
+  {
+    for(int c=0;c<m;c++)
+    {
+      i=n-1;
+      j=c;
+      while(i>=0 && j>=0)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j--;
+      }
+      k++;
+    }
+    for(int r=n-2;r>=0;r--)
+    {
+      i=r;
+      j=m-1;
+      while(i>=0 && j>=0)
+      {
+        V[k].push_back(A[i][j]);
+        i--;
+        j--;
+      }
+      k++;
+    }
+  }
+
+  for(int r=0;r<n+m-1;r++)
+    {
+      int size = V[r].size();
+      for(int c=0;c<size;c++)
+      {
+        cout<<V[r][c]<<" ";
+      }
+      cout<<"\n";
+    }
+}
+
+int main()
+{
+  int n,m,p,input;
+  cin>>n>>m>>p;
+  vector<vector<int> > A(n, vector<int> (m,0));
+  for(int r=0;r<n;r++)
+  {
+    for(int c=0;c<m;c++)
+    {
+      cin>>input;
+      A[r][c]=input;
+    }
+  }
+  solve(A,n,m,p);
+}

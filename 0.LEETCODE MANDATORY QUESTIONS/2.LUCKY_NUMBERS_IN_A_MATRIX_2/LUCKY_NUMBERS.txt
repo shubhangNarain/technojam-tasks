@@ -1,0 +1,55 @@
+class Solution {
+   int max(int a,int b)
+   {
+       if(a>b)
+           return a;
+       else
+           return b;
+   }
+    int min(int a,int b)
+    {
+        if(a<b)
+            return a;
+        else
+            return b;
+    }    
+    
+    
+    public List<Integer> luckyNumbers (int[][] matrix)
+    {
+        int R=matrix.length;
+        int C=matrix[0].length;
+        List<Integer> answer=new ArrayList<Integer>();
+        int rowmin[]=new int[R];
+        int colmax[]=new int[C]; 
+        for(int i=0;i<R;i++)
+        {
+            rowmin[i]=Integer.MAX_VALUE;
+        }
+        for(int i=0;i<C;i++)
+        {
+            colmax[i]=Integer.MIN_VALUE;
+        }
+         for(int i=0;i<R;i++)
+        {
+            for(int j=0;j<C;j++)
+            {
+            rowmin[i]=min(rowmin[i],matrix[i][j]);
+            colmax[j]=max(colmax[j],matrix[i][j]);               
+            }
+        }
+        
+        
+        for(int i=0;i<R;i++)
+        {
+            for(int j=0;j<C;j++)
+            {
+                if(rowmin[i] == colmax[j])
+                {
+                    answer.add(rowmin[i]);
+                }
+            }
+        }
+        return answer;
+}
+}
