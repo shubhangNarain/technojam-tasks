@@ -39,7 +39,7 @@ vectors, as they have dynamic sizes, I made a function that tells whether a numb
 if true, then we add that number in the sum variable to calculate the sum of all elements in the array/vector.
 Finally we extract the digits in the sum of prime numbers of the array and check whether the digits of the number 
 are different or not, if they are all different then we say, the number is Unique and return the message "YES", if
-not then we return the message "NO". **time complexity: O(n^2)**.
+not then we return the message "NO". **Time complexity: O(n^2)**.
 
 5. **Question 5:** Given a two-dimensional array or matrix of size n*m, Write an algorithm to print the given matrix
 in a zigzag manner or in other words print all the diagonals from bottom to up in the matrix starting from the
