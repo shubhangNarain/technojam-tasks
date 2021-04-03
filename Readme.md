@@ -21,11 +21,11 @@ to choose any 2 elements from the array and replace both of them with a new numb
 to the sum of both numbers. Our task is to find the maximum possible number of elements divisible by 4 that are
 in the array after performing the above operation any number of times.
 
-Firstly, we find the remainder for each element of the array after dividing it by 4 (a[ i ]%4), we calculate the
-number of 1's, 2's, 3's and 0's in the array now, Initially, the number of zeroes in the array represent the 
-elements divisible by 4, for the next step, we calculate how many 1+3's are there in the array then add the number
-to the number of zeroes, then we move on to 2+2's, then 1+1+1+1's and then finally 3+3+3+3's. The final number of 
-zeroes is our answer.**Time complexity: O(n)**.
+    Firstly, we find the remainder for each element of the array after dividing it by 4 (a[ i ]%4), we calculate the
+    number of 1's, 2's, 3's and 0's in the array now, Initially, the number of zeroes in the array represent the 
+    elements divisible by 4, for the next step, we calculate how many 1+3's are there in the array then add the number
+    to the number of zeroes, then we move on to 2+2's, then 1+1+1+1's and then finally 3+3+3+3's. The final number of 
+    zeroes is our answer.**Time complexity: O(n)**.
 
 3. **Question 3:** We are given an array of n integers. We want to make all the numbers in this array as odd. We
 can only make an even as odd by using an odd number present in the array, So the total number of evens in the array
