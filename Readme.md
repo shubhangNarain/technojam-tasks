@@ -46,7 +46,7 @@ in a zigzag manner or in other words print all the diagonals from bottom to up i
 position p as stated below: For p=1, Start from 0,0 position For p=2, Start from 0,m-1 position For p=3,
 Start from n-1,m-1 position For p=4, Start from n-1,0 position. I made a single function with different if else if
 conditional statements(depending upon the value of p), and for each value I have made 2 nested loops to fill the 
-array from the start and from the end upto the middle diagonal.
+array from the start and from the end upto the middle diagonal.**Time Complexity: O(n^2)**
 
 ## BIRTHDAY CARD (EASY):
 
