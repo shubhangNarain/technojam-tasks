@@ -5,7 +5,7 @@
 **NUMBER**
 
 ## COMPETITIVE PROGRAMMING (EASY):
-It is of no surprise that these easy questions were not so easy for the students of first. As of me, I had to study
+It is of no surprise that these easy questions were not so easy for the students of first year. As of me, I had to study
 some of the basics of DataStructres and Algorithms, I have been studying C/C++ from the past 3-5 months which helped
 me in dealing with the questions given in the tasks. Here is how I dealt with the given questions:
 
